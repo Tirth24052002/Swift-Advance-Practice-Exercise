@@ -24,11 +24,18 @@ extension String {
     }
     //Get number of words in a string
     var wordCount: Int {
-        return self.count
+        var whiteSpace = 0
+        var trimmedString = self.trimmingCharacters(in: [" "])
+        for char in trimmedString where char == " " {
+            whiteSpace += 1
+        }
+        return whiteSpace + 1
     }
 }
-var helloWorld = "Hello world!"
+var helloWorld = "Hello world! Earth is round"
 var addStg = helloWorld.addcharacter(at: 5, character: "!")
 var replaceChar = helloWorld.replaceCharacter(at: 5, with: "l")
 var removeSpaces = helloWorld.removeWhiteSpaces()
-var wrdCount = helloWorld.wordCount
+var count = helloWorld.wordCount
+
+

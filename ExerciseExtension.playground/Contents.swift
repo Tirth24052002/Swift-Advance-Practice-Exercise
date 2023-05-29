@@ -24,6 +24,7 @@ extension String {
     }
     //Get number of words in a string
     var wordCount: Int {
+  //      self.components(separatedBy: " ").count
         var whiteSpace = 0
         var trimmedString = self.trimmingCharacters(in: [" "])
         for char in trimmedString where char == " " {
